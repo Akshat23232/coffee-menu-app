@@ -1,0 +1,16 @@
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+.coffee-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+}
+.coffee-card img { width: 100%; height: 140px; object-fit: cover; border-radius: 6px; }
+.loading, .error { text-align:center; margin: 20px 0; }
+.error { color: #c00; }

@@ -25,10 +25,10 @@ A simple Angular 18+ application that displays a list of hot coffee drinks from 
 
 ## Screenshots
 
-> Replace these with actual screenshots from your app
 
 ![Screenshot 1](./screenshots/screenshot1.png)  
 ![Screenshot 2](./screenshots/screenshot2.png)  
+![Screenshot 3](./screenshots/screenshot3.png)  
 
 ---
 

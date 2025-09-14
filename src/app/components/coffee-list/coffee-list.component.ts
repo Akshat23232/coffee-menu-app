@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CoffeeService } from '../../services/coffee.service';
-
 
 @Component({
   selector: 'app-coffee-list',
@@ -10,24 +9,23 @@ import { CoffeeService } from '../../services/coffee.service';
   templateUrl: './coffee-list.component.html',
   styleUrls: ['./coffee-list.component.css']
 })
-export class CoffeeListComponent implements OnInit {
+export class CoffeeListComponent {
   coffees: any[] = [];
   loading = true;
   error = '';
 
   constructor(private coffeeService: CoffeeService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.coffeeService.getCoffees().subscribe({
-      next: (data: any[]) => {   
+      next: (data) => {
         this.coffees = data;
         this.loading = false;
       },
-      error: (err: any) => {     
+      error: () => {
         this.error = 'Failed to load coffees';
         this.loading = false;
       }
     });
   }
 }
-

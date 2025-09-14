@@ -1,13 +1,13 @@
-<div *ngIf="loading" class="loading">Loading coffees…</div>
-<div *ngIf="error" class="error">{{ error }}</div>
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
 
-<div *ngIf="!loading && !error" class="coffee-grid">
-  <div *ngFor="let coffee of coffees" class="coffee-card">
-    <img *ngIf="coffee.image" [src]="coffee.image" alt="{{ coffee.title }}" />
-    <h3>{{ coffee.title }}</h3>
+<div class="coffee-list" *ngIf="!loading && !error">
+  <div class="coffee-card" *ngFor="let coffee of coffees">
+    <h2>{{ coffee.title }}</h2>
+    <img [src]="coffee.image" alt="{{ coffee.title }}" width="150">
     <p>{{ coffee.description }}</p>
     <ul>
-      <li *ngFor="let ing of coffee.ingredients">{{ ing }}</li>
+      <li *ngFor="let ingredient of coffee.ingredients">{{ ingredient }}</li>
     </ul>
   </div>
 </div>

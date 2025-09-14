@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CoffeeListComponent } from './components/coffee-list/coffee-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],   
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [CoffeeListComponent],
+  template: `<app-coffee-list></app-coffee-list>`
 })
-export class AppComponent {
-  title = 'coffee-menu';
-}
+export class AppComponent {}
